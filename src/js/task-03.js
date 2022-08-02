@@ -12,3 +12,35 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+  
+
+// images.forEach(image => {
+//    const itemEl = document.createElement('li')
+//   console.log(itemEl);
+  
+
+//   const imageEl = document.createElement('img')
+//   imageEl.src = image.url
+//   imageEl.alt = image.alt
+  
+//  itemEl.append(imageEl)
+// })
+
+
+
+
+
+const markup = images.map(image => {
+  const itemEl = document.createElement('li')
+  console.log(itemEl);
+  
+
+  const imageEl = document.createElement('img')
+  imageEl.src = image.url
+  imageEl.alt = image.alt
+  
+ itemEl.append(imageEl)
+  
+
+})
