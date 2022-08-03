@@ -14,33 +14,14 @@ const images = [
 ];
 
   
+const listEl = document.querySelector('.gallery')
 
-// images.forEach(image => {
-//    const itemEl = document.createElement('li')
-//   console.log(itemEl);
+const markup = images
+  .map(image =>   `<li><img src = "${image.url}" alt = "${image.alt}" width = 350 ></li>`)
+  .join('')
   
 
-//   const imageEl = document.createElement('img')
-//   imageEl.src = image.url
-//   imageEl.alt = image.alt
-  
-//  itemEl.append(imageEl)
-// })
+  listEl.insertAdjacentHTML('beforeend', markup)
 
 
 
-
-
-const markup = images.map(image => {
-  const itemEl = document.createElement('li')
-  console.log(itemEl);
-  
-
-  const imageEl = document.createElement('img')
-  imageEl.src = image.url
-  imageEl.alt = image.alt
-  
- itemEl.append(imageEl)
-  
-
-})
