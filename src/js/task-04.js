@@ -12,6 +12,5 @@ btnNext.addEventListener('click', () => {
     
     span.textContent -= -1
     
-
 })
 

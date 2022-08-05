@@ -12,12 +12,15 @@ const ingredients = [
 // Добавит элементу класс item.
 // После чего вставит все <li> за одну операцию в список ul#ingredients
 
-ingredients.map(elem => {
+const markup = ingredients
+  .map(elem => {
   const itemEl = document.createElement('li')
   itemEl.textContent = elem
   itemEl.classList.add('item')
-  const listEl = document.querySelector('#ingredients')
-  listEl.append(itemEl)
   
-
+  return itemEl
 })
+console.log(markup);
+
+const listEl = document.querySelector('#ingredients')
+listEl.append(...markup)
